@@ -1,0 +1,8 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.jaya",
+      "sha256_cert_fingerprints": ["AB:30:74:12:07:5A:22:53:FB:93:88:2F:8A:86:4B:40:84:E8:98:FA:04:C5:58:8C:1D:1F:76:97:60:7B:D3:64"]
+    }
+  }]
