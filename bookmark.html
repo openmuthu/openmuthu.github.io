@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgamAnvEShiNI Bookmark</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    h1 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    p  { color: #aaa; margin-bottom: 2rem; }
+    a.btn {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  </style>
+  <script>
+    function getParam(name) {
+      return new URLSearchParams(window.location.search).get(name) || "";
+    }
+    window.onload = function () {
+      var name = getParam("name");
+      if (name) document.getElementById("bname").textContent = "\u201C" + name + "\u201D";
+      // Auto-redirect Android users straight to Play Store
+      if (/android/i.test(navigator.userAgent)) {
+        window.location = "https://play.google.com/store/apps/details?id=org.jaya";
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>AgamAnvEShiNI</h1>
+  <p>Install the app to open the bookmark <span id="bname"></span></p>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=org.jaya">
+    Get it on Google Play
+  </a>
+</body>
+</html>
